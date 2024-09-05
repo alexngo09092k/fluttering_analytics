@@ -1,3 +1,0 @@
-class MockFlutteringAnalyticsPlatform {}
-
-void main() {}

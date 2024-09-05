@@ -1,5 +1,7 @@
 import 'dart:async';
-
+import 'dart:ui';
+// ignore: implementation_imports
+import 'package:flutter/src/widgets/navigator.dart';
 import 'package:fluttering/fluttering.dart';
 import 'package:fluttering_analytics/analytics/google/google_analytics.dart';
 import 'package:fluttering_analytics/analytics/huawei/huawei_analytics.dart';
@@ -8,7 +10,7 @@ import 'package:fluttering_analytics/analytics/models/analytics_provider.dart';
 import 'package:fluttering_analytics/base_analytics.dart';
 
 abstract class IAwesomeAnalytics extends Provider
-    with ProviderObserver, ProviderDelegate {
+    implements ProviderObserver, ProviderDelegate {
   AnalyticsConfig get config;
 
   void initial(AnalyticsConfig config);
@@ -60,5 +62,42 @@ class AwesomeAnalytics extends IAwesomeAnalytics {
     for (BaseAnalytics item in _analytics.values) {
       if (item.isSupported) item.sendEvent(name, parameters);
     }
+  }
+
+  @override
+  Future<bool> changedAppLifecycleState(AppLifecycleState state) async {
+   return true;
+  }
+
+  @override
+  void didPop(Route route, Route? previousRoute) {
+  }
+
+  @override
+  void didPush(Route route, Route? previousRoute) {
+  }
+
+  @override
+  void didReplace({Route? newRoute, Route? oldRoute}) {
+  }
+
+  @override
+  Future<bool> registered() async {
+    return true;
+  }
+
+  @override
+  Future<bool> willCloseApp() async {
+    return true;
+  }
+
+  @override
+  Future<bool> willOpenApp() async {
+   return true;
+  }
+
+  @override
+  Future<bool> willSplash() async {
+   return true;
   }
 }
