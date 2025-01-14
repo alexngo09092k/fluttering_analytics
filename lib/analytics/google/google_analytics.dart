@@ -37,6 +37,6 @@ class GoogleAnalytics extends BaseAnalytics {
     // Only strings and numbers (longs & doubles for android, ints and doubles for iOS) are supported for GA custom event parameters:
     // https://firebase.google.com/docs/reference/ios/firebaseanalytics/api/reference/Classes/FIRAnalytics#+logeventwithname:parameters:
     // https://firebase.google.com/docs/reference/android/com/google/firebase/analytics/FirebaseAnalytics#public-void-logevent-string-name,-bundle-params
-    return analytics.logEvent(name: name, parameters: parameters);
+    return analytics.logEvent(name: name, parameters: parameters as Map<String, Object>);
   }
 }
