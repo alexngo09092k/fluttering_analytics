@@ -1,6 +1,6 @@
 name: fluttering_analytics
 description: "Analytics for flutter app"
-version: 3.0.0
+version: 3.0.1
 homepage:
 
 environment:
@@ -8,13 +8,13 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  firebase_analytics: ^11.4.0
+  firebase_analytics: ^13.0.1
   flutter:
     sdk: flutter
   fluttering:
     git:
       url: git@github.com:brennan992k/fluttering.git
-  huawei_analytics: ^6.12.0+301
+  huawei_analytics: ^6.12.0+302
 
 dev_dependencies:
   flutter_test:
