@@ -1,6 +1,6 @@
 name: fluttering_analytics
 description: "Analytics for flutter app"
-version: 3.0.1
+version: 3.0.2
 homepage:
 
 environment:
@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   fluttering:
     git:
-      url: git@github.com:brennan992k/fluttering.git
+      url: git@github.com:alexngo09092k/fluttering.git
   huawei_analytics: ^6.12.0+302
 
 dev_dependencies:
