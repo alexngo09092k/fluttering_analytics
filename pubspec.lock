@@ -211,12 +211,11 @@ packages:
   fluttering:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: d51e68744343b0e6038cf5d8a127d7dd566b424c
-      url: "git@github.com:alexngo09092k/fluttering.git"
-    source: git
-    version: "3.0.0"
+      name: fluttering
+      sha256: "910f0fc40b09103b9426e9a9b413e29395bc30b07b3fbc7b026d5d85bd7850c9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
   http:
     dependency: transitive
     description:

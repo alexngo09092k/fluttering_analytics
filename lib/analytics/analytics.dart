@@ -66,20 +66,20 @@ class AwesomeAnalytics extends IAwesomeAnalytics {
 
   @override
   Future<bool> changedAppLifecycleState(AppLifecycleState state) async {
-   return true;
+    return true;
   }
 
   @override
-  void didPop(Route route, Route? previousRoute) {
-  }
+  void didPop(Route route, Route? previousRoute) {}
 
   @override
-  void didPush(Route route, Route? previousRoute) {
-  }
+  void didPush(Route route, Route? previousRoute) {}
 
   @override
-  void didReplace({Route? newRoute, Route? oldRoute}) {
-  }
+  void didReplace({Route? newRoute, Route? oldRoute}) {}
+
+  @override
+  void didRemove(Route<dynamic> route, Route<dynamic>? previousRoute) {}
 
   @override
   Future<bool> registered() async {
@@ -93,11 +93,11 @@ class AwesomeAnalytics extends IAwesomeAnalytics {
 
   @override
   Future<bool> willOpenApp() async {
-   return true;
+    return true;
   }
 
   @override
   Future<bool> willSplash() async {
-   return true;
+    return true;
   }
 }
